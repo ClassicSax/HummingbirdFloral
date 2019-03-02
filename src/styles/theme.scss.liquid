@@ -1,0 +1,70 @@
+/**
+ * Insert your styles with Liquid below.
+ *
+ * Import additional stylesheets into this sheet using CSS imports:
+ * @import url('./global/form.scss');
+ */
+@import url('./theme.scss');
+ 	.contact{
+ 		padding: 4%;
+ 		height: 400px;
+ 	}
+ 	.col-md-3{
+ 		background: #ff9b00;
+ 		padding: 4%;
+ 		border-top-left-radius: 0.5rem;
+ 		border-bottom-left-radius: 0.5rem;
+ 	}
+ 	.contact-info{
+ 		margin-top:10%;
+ 	}
+ 	.contact-info img{
+ 		margin-bottom: 15%;
+ 	}
+ 	.contact-info h2{
+ 		margin-bottom: 10%;
+ 	}
+ 	.col-md-9{
+ 		background: #fff;
+ 		padding: 3%;
+ 		border-top-right-radius: 0.5rem;
+ 		border-bottom-right-radius: 0.5rem;
+ 	}
+ 	.contact-form label{
+ 		font-weight:600;
+ 	}
+ 	.contact-form button:focus{
+ 		box-shadow:none;
+ 	}
+  .collection-hero {
+    position: relative;
+    overflow: hidden;
+    margin-top: -$gutter-site;
+    margin-bottom: $gutter-site-mobile;
+
+    @include media-query($medium-up) {
+      margin-bottom: $section-spacing-small;
+    }
+  }
+
+  .collection-description {
+    margin-bottom: $gutter-site-mobile;
+    margin-top: $gutter-site-mobile;
+
+    @include media-query($medium-up) {
+      margin-bottom: $section-spacing-small;
+      margin-top: $section-spacing-small;
+    }
+  }
+
+  .collection-hero__image {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    opacity: 1;
+
+    @include media-query($small) {
+      height: 180px;
+    }
+  }
