@@ -4,35 +4,44 @@
  * Import additional stylesheets into this sheet using CSS imports:
  * @import url('./global/form.scss');
  */
-@import url('./theme.scss');
- 	.contact{
- 		padding: 4%;
- 		height: 400px;
- 	}
- 	.col-md-3{
- 		background: #ff9b00;
- 		padding: 4%;
- 		border-top-left-radius: 0.5rem;
- 		border-bottom-left-radius: 0.5rem;
- 	}
- 	.contact-info{
- 		margin-top:10%;
- 	}
- 	.contact-info img{
- 		margin-bottom: 15%;
- 	}
- 	.contact-info h2{
- 		margin-bottom: 10%;
- 	}
- 	.col-md-9{
- 		background: #fff;
- 		padding: 3%;
- 		border-top-right-radius: 0.5rem;
- 		border-bottom-right-radius: 0.5rem;
- 	}
- 	.contact-form label{
- 		font-weight:600;
- 	}
- 	.contact-form button:focus{
- 		box-shadow:none;
- 	}
+ @charset 'UTF-8';
+
+ /**
+  * [replace with theme name] | Built with Slate
+  */
+ @import '~normalize.css/normalize';
+
+ // Settings
+ @import './variables';
+
+ // Tools
+ @import './tools/mixins';
+ @import './tools/functions';
+
+ // Core
+ @import './core/forms';
+ @import './core/helpers';
+ @import './core/layout';
+ @import './core/media';
+ @import './core/responsive-tables';
+ @import './core/rte';
+ @import './core/typography';
+
+ // Components
+ @import './components/buttons';
+ @import './components/hero-banner';
+ @import './components/icons';
+ @import './components/placeholders';
+ @import './components/responsive-images';
+
+ // Sections
+ @import './sections/blog-posts';
+ @import './sections/collection-list';
+ @import './sections/featured-collection';
+ @import './sections/image-with-text';
+ @import './sections/header';
+
+ // Templates
+ @import './templates/gift_card';
+ @import './templates/product';
+ @import './templates/contact';
