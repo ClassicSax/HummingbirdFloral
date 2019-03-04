@@ -1,1 +1,1 @@
-import '../../styles/templates/contact.scss';
+import '../../styles/templates/contact.scss'

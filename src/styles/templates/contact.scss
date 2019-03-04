@@ -1,9 +1,11 @@
 .contact{
   padding: 4%;
   height: 400px;
+  margin-bottom: 5000px;
 }
 .col-md-3{
-  background: #ff9b00;
+  background: #669966;
+  color: #1C2833;
   padding: 4%;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
@@ -23,9 +25,19 @@
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
+.contact-form  {
+  font-size: 18px;
+}
+.contact-form input, .contact-form textarea{
+  font-size: 18px;
+}
+.contact-form input {
+  height: 30px;
+}
 .contact-form label{
   font-weight:600;
 }
+
 .contact-form button:focus{
   box-shadow:none;
 }
