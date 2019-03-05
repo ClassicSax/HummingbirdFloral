@@ -24,16 +24,18 @@
     {% endif %}
   </header>
 
-  <div class="container">
+<div class="container.fluid">
+  <div class="row">
+
     {% for product in collection.products %}
-      <div class="row">
-        <div class="col-lg-4">
+    
         {% if product.featured_image != blank %}
-          <a href="{{ product.url | within: collection }}">
+        <div class="col-lg-4">
+          <a  href="{{ product.url | within: collection }}">
             {% include 'responsive-image' with
               image: product.featured_image,
-              max_width: 700,
-              max_height: 800
+              max_width: 480,
+              max_height: 480
             %}
           </a>
         {% endif %}
@@ -42,7 +44,7 @@
           <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
         </p>
         <p>
-          </div>
+
           {% if product.compare_at_price > product.price %}
 
             {% if product.price_varies %}
@@ -74,7 +76,7 @@
           {% endunless %}
         </p>
 
-      </div>
+
 
     {% else %}
       {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
@@ -90,15 +92,15 @@
 
           <p>
             {{ 1999 | money }}
-          </p>
+          </p></div>
         {% endfor %}
       {% else %}
         <p>{{ 'collections.general.no_matches' | t }}</p>
       {% endif %}
 
     {% endfor %}
-  </div>
-
+</div>
+</div>
   {% if paginate.pages > 1 %}
     {% include 'pagination' %}
   {% endif %}
