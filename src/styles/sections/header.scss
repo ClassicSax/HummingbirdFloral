@@ -1,3 +1,37 @@
 nav {
-  font-size:24px;
+  font-size:18px;
+}
+.search{
+  padding: .375rem .75rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.search:focus {
+  outline-color: $color-link-hover;
+}
+a {
+    color: $color-link-text;
+}
+a:hover {
+  color: $color-link-hover;
+}
+ .navbar .navbar-nav .nav-item a {
+  color: $color-link-text;
+}
+.navbar .navbar-nav .nav-item a:hover{
+  color: $color-link-hover;
+  text-decoration: none;
+}
+.btn {
+  color:$color-link-text;
+}
+.btn:hover {
+  color: $color-link-hover;
 }

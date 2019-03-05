@@ -1,21 +1,23 @@
-<footer class="footer">
+<footer class="footer container.fluid bg-light">
 
   {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
-  <ul>
+  <ul class="row nodec">
     {% for social in social_accounts %}
       {%- assign social_handle = social | handleize -%}
       {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
       {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
+    <div class="justify-content-start">
+
 
       {% if settings[social_link] != blank %}
-        <li>
+        <li class="col-1">
           <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
             {% include social_icon %}
             <span class="icon-fallback-text">{{ social }}</span>
           </a>
         </li>
       {% endif %}
-
+    </div>
     {% endfor %}
   </ul>
 
@@ -34,15 +36,15 @@
 
   {%- assign footer_linklist = section.settings.footer_linklist -%}
   {% if linklists[footer_linklist].links.size > 0 %}
-    <ul>
+    <ul class="row nodec ">
       {% for link in linklists[footer_linklist].links %}
-        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        <li class="col-6"><a  href="{{ link.url }}">{{ link.title }}</a></li>
       {% endfor %}
     </ul>
   {% endif %}
 
-  <div>
-    <small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</small>
+  <div class="row">
+    <small class="col-12 ml-5">{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</small>
   </div>
 </footer>
 

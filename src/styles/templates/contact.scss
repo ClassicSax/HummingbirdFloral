@@ -1,7 +1,11 @@
 .contact{
   padding: 4%;
   height: 400px;
-  margin-bottom: 5000px;
+  margin-bottom: 400px;
+
+}
+.form-control:focus {
+  outline-color: $color-link-hover;
 }
 .col-md-3{
   background: #669966;

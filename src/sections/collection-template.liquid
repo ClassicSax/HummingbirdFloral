@@ -40,7 +40,7 @@
           <div class="collection-hero__image" style="background-image: url({{ collection.image | img_url: '2048x600', crop: 'top' }});"></div>
         </noscript>
         <div class="collection-hero__title-wrapper">
-          <h1 class="collection-hero__title page-width">
+          <h1 class="collection-hero__title page-width text-center">
             <span role="text">
               <span class="visually-hidden">{{ 'collections.general.collection_label' | t }}: </span>
               {{ collection.title }}
@@ -61,7 +61,7 @@
     {% else %}
       <div class="page-width">
         <div class="section-header text-center">
-          <h1>
+          <h1 class="text-center">
             <span role="text">
               <span class="visually-hidden">{{ 'collections.general.collection_label' | t }}: </span>
               {{ collection.title }}

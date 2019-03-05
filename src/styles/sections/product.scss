@@ -1,0 +1,22 @@
+.product-picture {
+  padding-top: 100px;
+  padding-bottom: 25px;
+  align-content: center;
+}
+.product-content {
+  padding-bottom:100px;
+  align-content: center;
+}
+.product-item {
+
+  margin-bottom:25px;
+}
+
+@media (min-width:992px) {
+  .product-picture{
+    padding-bottom:100px;
+  }
+  .product-content{
+    padding-top: 100px;
+  }
+}

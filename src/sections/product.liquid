@@ -1,4 +1,9 @@
 <section data-section-id="{{ section.id }}" data-section-type="product">
+<div class="container.fluid product">
+  <div class="row">
+
+<div class="col-lg-7 justify-content-end pt-5 product-picture">
+
 
   {%- assign current_variant = product.selected_or_first_available_variant -%}
   {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
@@ -31,9 +36,12 @@
       {% endfor %}
     </ul>
   {% endif %}
+</div>
+<div class="col-lg-5 product-content">
 
-  <h1>{{ product.title }}</h1>
-  <p>{{ product.vendor }}</p>
+
+  <h1 class=" product-item">{{ product.title }}</h1>
+  <p class=" product-item">{{ product.vendor }}</p>
 
 
   {% form 'product', product, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true' %}
@@ -83,11 +91,11 @@
         {% endfor %}
       </select>
     </noscript>
-
+ <div class="product-item">
     <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
     <input type="number" id="Quantity" name="quantity" value="1" min="1">
-
-    <div data-price-wrapper>
+ </div>
+    <div data-price-wrapper class="product-item">
       <span data-product-price>
         {{ current_variant.price | money }}
       </span>
@@ -102,7 +110,7 @@
       {% endif %}
     </div>
 
-    <button
+    <button class="product-item"
       type="submit"
       name="add"
       data-submit-button
@@ -117,13 +125,15 @@
     </button>
   {% endform %}
 
-  <div class="rte">
+  <div class="rte product-item">
     {{ product.description }}
   </div>
 
   {% if section.settings.show_share_buttons %}
     {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
   {% endif %}
+  </div>
+</div>
 </section>
 
 {% schema %}
