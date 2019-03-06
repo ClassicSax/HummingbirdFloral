@@ -60,3 +60,14 @@ $breakpoints: (
   $large-up '(min-width: #{$grid-large})',
   $widescreen '(min-width: #{$grid-widescreen})'
 );
+// Sizing variables
+$width-site: 1200px;
+$gutter-site: 55px;
+$gutter-site-mobile: 22px;
+$section-spacing: 55px;
+$section-spacing-small: 35px;
+$border-radius: 2px;
+// Overlays
+$color-overlay-title-text: white;
+$color-image-overlay: white;
+$opacity-image-overlay: {{ settings.image_overlay_opacity | divided_by: 100.00 }};
