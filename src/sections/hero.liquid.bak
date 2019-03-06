@@ -1,0 +1,13 @@
+<section class="image-overlay">
+  {% capture image_layout %}
+    {% if section.settings.image != blank %}
+      {% include 'responsive-image' with
+        image: section.settings.image,
+        max_width: 1200,
+        max_height: 600
+      %}
+      {% else %}
+        {{ 'image' | placeholder_svg_tag: 'placeholder_svg'}}
+      {% endif %}
+      {% endcapture %}
+</section>

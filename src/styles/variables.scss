@@ -60,14 +60,27 @@ $breakpoints: (
   $large-up '(min-width: #{$grid-large})',
   $widescreen '(min-width: #{$grid-widescreen})'
 );
-// Sizing variables
+/*================ Sizing Variables ================*/
 $width-site: 1200px;
 $gutter-site: 55px;
 $gutter-site-mobile: 22px;
 $section-spacing: 55px;
 $section-spacing-small: 35px;
 $border-radius: 2px;
-// Overlays
-$color-overlay-title-text: white;
-$color-image-overlay: white;
-$opacity-image-overlay: {{ settings.image_overlay_opacity | divided_by: 100.00 }};
+
+$font-size-header: 26 * 1px;
+$font-size-base: 16px; // Henceforth known as 1em
+/*================ Color Variables ================*/
+// Text colors
+$color-text: #3d4246;
+$color-text-shadow: rgba(0,0,0,0.4);
+$color-body-text: #69727b;
+$color-sale-text: #557b97;
+$color-small-button-text-border: #3d4246;
+$color-text-field: #fff;
+$color-text-field-text: #000;
+$color-navigation-text: #3d4246;
+//Overlays
+$color-overlay-title-text: #fff;
+$color-image-overlay: #3d4246;
+$opacity-image-overlay: 0.4;;
